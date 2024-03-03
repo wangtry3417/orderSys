@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 const io = new Server(3555);
 
 io.on("connection",(socket) => {
-    socket.emit("connect","Server: User connected")
+    socket.emit("connected","Server: User connected")
     socket.on("joinStaff",() => {
         socket.join("staff");
     });
